@@ -27,6 +27,7 @@ header{
     background:rgba(255,255,255,0.94);
     border-bottom:1px solid #f0f2f8;
 }
+
 .nav-inner{
     max-width:1080px;
     margin:0 auto;
@@ -34,7 +35,9 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    flex-wrap:wrap;  /* 모바일에서 줄바꿈 허용 */
 }
+
 .brand{
     display:flex;
     align-items:center;
@@ -42,37 +45,58 @@ header{
     font-weight:700;
     letter-spacing:.02em;
 }
+
 .brand span.logo-dot{
     width:24px;height:24px;
     border-radius:8px;
     background:linear-gradient(135deg,#1a57ff,#00c2ff);
     display:inline-block;
 }
+
+/* 회사 로고 이미지 */
 .logo-img {
-    height: 40px;         /* 높이 조절 */
-    width: auto;          /* 비율 유지 */
-    border-radius: 6px;   /* (선택) 모서리 라운드 */
+    height: 40px;
+    width: auto;
+    border-radius: 6px;
 }
-/* 햄버거 버튼 기본 숨김 (PC) */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
+
+.brand-text{
+    font-size:20px;
 }
-nav a{
+
+/* 메뉴 영역 */
+.nav-menu{
+    display:flex;
+    align-items:center;
+}
+
+/* 메뉴 링크 */
+.nav-menu a{
     margin-left:18px;
     font-size:14px;
     text-decoration:none;
     color:#444;
 }
-nav a:hover{
+.nav-menu a:hover{
     color:var(--primary);
 }
 
-main{max-width:1080px;margin:0 auto;}
+/* 햄버거 버튼 기본: PC에서는 숨김 */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    margin-left:auto;
+}
 
+main{
+    max-width:1080px;
+    margin:0 auto;
+}
+
+/* HERO */
 .hero{
     display:grid;
     grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
@@ -150,6 +174,7 @@ main{max-width:1080px;margin:0 auto;}
     color:#375;
 }
 
+/* SECTIONS */
 section{
     padding:28px 20px 8px;
 }
@@ -162,6 +187,7 @@ section .sub{
     font-size:13px;
     color:var(--muted);
 }
+
 .cols{
     display:flex;
     flex-wrap:wrap;
@@ -194,6 +220,7 @@ section .sub{
     color:var(--muted);
 }
 
+/* TIMELINE */
 .timeline{
     position:relative;
     margin-top:10px;
@@ -232,6 +259,7 @@ section .sub{
     color:#444;
 }
 
+/* CEO 프로필 */
 .profile{
     display:flex;
     flex-wrap:wrap;
@@ -260,12 +288,14 @@ section .sub{
     margin:6px 0 0;
 }
 
+/* GRID 2 */
 .grid-2{
     display:grid;
     gap:18px;
     grid-template-columns:minmax(0,1.4fr) minmax(0,1.2fr);
 }
 
+/* CONTACT */
 .contact-grid{
     display:flex;
     flex-wrap:wrap;
@@ -280,8 +310,12 @@ section .sub{
     padding:16px 18px;
     background:var(--bg);
 }
-.contact-box strong{display:block;margin-bottom:4px;}
+.contact-box strong{
+    display:block;
+    margin-bottom:4px;
+}
 
+/* FOOTER */
 footer{
     margin-top:30px;
     border-top:1px solid #edf0f7;
@@ -291,43 +325,52 @@ footer{
     text-align:center;
 }
 
+/* =================================
+   반응형
+   ================================= */
+
+/* 태블릿 이하: hero 1컬럼 */
 @media (max-width:860px){
     .hero{
         grid-template-columns:1fr;
         padding-top:40px;
     }
-    .hero-card{order:-1;}
-    .grid-2{grid-template-columns:1fr;}
+    .hero-card{
+        order:-1;
+    }
+    .grid-2{
+        grid-template-columns:1fr;
+    }
 }
+
+/* 모바일(600px 이하): 햄버거 메뉴 사용 */
 @media (max-width:600px){
-    nav{display:none;}
-    header{border-bottom:none;}
-}
-/* ==============================
-   모바일 화면(600px 이하)
-   ============================== */
-@media (max-width: 600px) {
+
+    .brand-text{
+        font-size:18px;
+    }
 
     /* 햄버거 버튼 보이기 */
-    .menu-toggle {
-        display: block;
-        margin-left: auto;
+    .menu-toggle{
+        display:block;
     }
 
-    /* 메뉴 숨기기 */
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 16px;
+    /* 메뉴 기본: 숨김 + 세로 정렬 */
+    .nav-menu{
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        width:100%;
+        margin-top:10px;
     }
 
-    /* 메뉴 열렸을 때 */
-    .nav-menu.active {
-        display: flex;
+    /* 토글되면 보이기 */
+    .nav-menu.active{
+        display:flex;
     }
 
-    nav a {
-        font-size: 18px;
+    .nav-menu a{
+        margin:8px 0 0;
+        font-size:16px;
     }
 }
