@@ -53,6 +53,14 @@ header{
     width: auto;          /* 비율 유지 */
     border-radius: 6px;   /* (선택) 모서리 라운드 */
 }
+/* 햄버거 버튼 기본 숨김 (PC) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
 nav a{
     margin-left:18px;
     font-size:14px;
@@ -294,4 +302,32 @@ footer{
 @media (max-width:600px){
     nav{display:none;}
     header{border-bottom:none;}
+}
+/* ==============================
+   모바일 화면(600px 이하)
+   ============================== */
+@media (max-width: 600px) {
+
+    /* 햄버거 버튼 보이기 */
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* 메뉴 숨기기 */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    /* 메뉴 열렸을 때 */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
 }
