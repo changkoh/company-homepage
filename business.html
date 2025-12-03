@@ -11,9 +11,14 @@
     <div class="nav-inner">
         <div class="brand">
             <img src="assets/logo.png" alt="KairoTech Logo" class="logo-img">
-            <span>카이로텍 KairoTech</span>
+            <span class="brand-text">카이로텍 KairoTech</span>
         </div>
-        <nav>
+
+        <!-- 모바일용 햄버거 버튼 -->
+        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+
+        <!-- 네비게이션 메뉴 -->
+        <nav class="nav-menu">
             <a href="index.html">홈</a>
             <a href="about.html">회사소개</a>
             <a href="business.html">사업영역</a>
@@ -106,5 +111,18 @@
 <footer>
     © 2025 KairoTech Co., Ltd. All rights reserved.
 </footer>
+
+<!-- 모바일 햄버거 메뉴 스크립트 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-menu');
+        if (!btn || !nav) return;
+
+        btn.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    });
+</script>
 </body>
 </html>
