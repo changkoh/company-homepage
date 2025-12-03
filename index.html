@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-
 <header>
     <div class="nav-inner">
         <div class="brand">
@@ -15,10 +14,10 @@
             <span class="brand-text">카이로텍 KairoTech</span>
         </div>
 
-        <!-- 모바일 햄버거 버튼 -->
+        <!-- 모바일용 햄버거 버튼 -->
         <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
 
-        <!-- 네비 메뉴 -->
+        <!-- 네비게이션 메뉴 -->
         <nav class="nav-menu">
             <a href="index.html">홈</a>
             <a href="about.html">회사소개</a>
@@ -29,29 +28,63 @@
 </header>
 
 <main>
-    <!-- HERO -->
-    <section class="hero" id="top">
+    <!-- HERO(강화 버전) -->
+    <section class="hero hero-home" id="top">
+        <!-- 왼쪽: 메시지 -->
         <div class="hero-inner">
-            <p class="hero-badge">생산 아웃소싱 · 자동차 공조부품</p>
-
+            <div class="hero-badge">생산 아웃소싱 · 자동차 공조부품 전문기업</div>
             <h1>
                 고객 공장을<br />
-                내 공장처럼 운영하는 기업
+                내 공장처럼 운영하는<br />
+                <span class="hero-highlight">생산 파트너</span>
             </h1>
-
             <p class="hero-lead">
-                카이로텍은 생산 아웃소싱과 자동차 공조부품 가공·조립을 전문으로 하며
-                현장의 생산성과 품질을 함께 개선합니다.
+                카이로텍은 자동차 공조 시스템 2차사의 생산 아웃소싱 전문회사로서,<br>
+                공정·품질·시스템을 함께 보는 관점으로
+                고객사의 생산성과 품질을 동시에 끌어올립니다.
             </p>
-
             <div class="hero-actions">
                 <a href="business.html" class="btn-primary">사업영역 보기</a>
                 <a href="contact.html" class="btn-ghost">문의 및 오시는 길</a>
             </div>
+
+            <div class="hero-grid">
+                <div class="stat">
+                    <div class="stat-title">주요 분야</div>
+                    <div class="stat-value">자동차 공조 시스템</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">운영 방식</div>
+                    <div class="stat-value">사급 · 도급 아웃소싱</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">강점</div>
+                    <div class="stat-value">ERP·MES·QMS 자체 구축</div>
+                </div>
+            </div>
         </div>
+
+        <!-- 오른쪽: 유리 카드 요약 -->
+        <aside class="hero-side-card">
+            <h2>카이로텍이 하는 일</h2>
+            <ul class="hero-side-list">
+                <li>
+                    <strong>생산 라인 아웃소싱 운영</strong>
+                    계획·인력·교육·정산까지 전 과정 책임 운영
+                </li>
+                <li>
+                    <strong>자동차 공조부품 가공·조립</strong>
+                    히터코어, 에바코어 등 공조 부품 생산
+                </li>
+                <li>
+                    <strong>현장 + 시스템 통합 관리</strong>
+                    자체 ERP·MES·QMS로 데이터 기반 운영
+                </li>
+            </ul>
+        </aside>
     </section>
 
-    <!-- SUMMARY -->
+    <!-- 간단 요약 섹션: 각 페이지로 연결 -->
     <section>
         <h2>카이로텍 한눈에 보기</h2>
         <p class="sub">
@@ -62,34 +95,18 @@
         <div class="cols">
             <div class="card">
                 <h3>회사소개</h3>
-                <p>
-                    설립 배경, 비전, 대표 소개, 연혁 등은 회사소개 페이지에서 확인하실 수 있습니다.
-                </p>
-                <p style="margin-top:10px;">
-                    <a href="about.html">→ 회사소개 자세히 보기</a>
-                </p>
+                <p>설립 배경, 비전, 대표 소개, 연혁 등은 회사소개 페이지에서 자세히 확인하실 수 있습니다.</p>
+                <p style="margin-top:10px;"><a href="about.html">→ 회사소개 자세히 보기</a></p>
             </div>
-
             <div class="card">
                 <h3>사업영역</h3>
-                <p>
-                    생산 아웃소싱, 공조부품 가공·조립, 공정·품질 개선, ERP·MES·QMS 구축 등
-                    주요 서비스를 정리했습니다.
-                </p>
-                <p style="margin-top:10px;">
-                    <a href="business.html">→ 사업영역 자세히 보기</a>
-                </p>
+                <p>생산 아웃소싱, 공조부품 가공·조립, 공정·품질 개선, ERP·MES·QMS 구축 등 주요 서비스를 정리했습니다.</p>
+                <p style="margin-top:10px;"><a href="business.html">→ 사업영역 자세히 보기</a></p>
             </div>
-
             <div class="card">
                 <h3>오시는 길 & 문의</h3>
-                <p>
-                    방문 및 상담은 언제든지 환영합니다.
-                    주소, 연락처, 주요 문의 항목을 확인해 주세요.
-                </p>
-                <p style="margin-top:10px;">
-                    <a href="contact.html">→ 오시는 길 & 문의</a>
-                </p>
+                <p>방문 및 상담은 언제든지 환영합니다. 주소, 연락처, 주요 문의 항목을 확인해 주세요.</p>
+                <p style="margin-top:10px;"><a href="contact.html">→ 오시는 길 & 문의</a></p>
             </div>
         </div>
     </section>
@@ -111,6 +128,5 @@
         });
     });
 </script>
-
 </body>
 </html>
