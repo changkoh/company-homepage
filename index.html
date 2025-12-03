@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+
 <header>
     <div class="nav-inner">
         <div class="brand">
             <img src="assets/logo.png" alt="KairoTech Logo" class="logo-img">
-            <span>카이로텍 KairoTech</span>
+            <span class="brand-text">카이로텍 KairoTech</span>
         </div>
-        <nav>
+
+        <!-- 모바일 햄버거 버튼 -->
+        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+
+        <!-- 네비 메뉴 -->
+        <nav class="nav-menu">
             <a href="index.html">홈</a>
             <a href="about.html">회사소개</a>
             <a href="business.html">사업영역</a>
@@ -23,18 +29,21 @@
 </header>
 
 <main>
-    <!-- 기존 HERO 그대로 사용 -->
+    <!-- HERO -->
     <section class="hero" id="top">
         <div class="hero-inner">
-            <p class="badge">생산 아웃소싱 · 자동차 공조부품</p>
+            <p class="hero-badge">생산 아웃소싱 · 자동차 공조부품</p>
+
             <h1>
                 고객 공장을<br />
                 내 공장처럼 운영하는 기업
             </h1>
-            <p class="lead">
+
+            <p class="hero-lead">
                 카이로텍은 생산 아웃소싱과 자동차 공조부품 가공·조립을 전문으로 하며
                 현장의 생산성과 품질을 함께 개선합니다.
             </p>
+
             <div class="hero-actions">
                 <a href="business.html" class="btn-primary">사업영역 보기</a>
                 <a href="contact.html" class="btn-ghost">문의 및 오시는 길</a>
@@ -42,7 +51,7 @@
         </div>
     </section>
 
-    <!-- 간단 요약 섹션: 각 페이지로 연결 -->
+    <!-- SUMMARY -->
     <section>
         <h2>카이로텍 한눈에 보기</h2>
         <p class="sub">
@@ -53,18 +62,34 @@
         <div class="cols">
             <div class="card">
                 <h3>회사소개</h3>
-                <p>설립 배경, 비전, 대표 소개, 연혁 등은 회사소개 페이지에서 자세히 확인하실 수 있습니다.</p>
-                <p style="margin-top:10px;"><a href="about.html">→ 회사소개 자세히 보기</a></p>
+                <p>
+                    설립 배경, 비전, 대표 소개, 연혁 등은 회사소개 페이지에서 확인하실 수 있습니다.
+                </p>
+                <p style="margin-top:10px;">
+                    <a href="about.html">→ 회사소개 자세히 보기</a>
+                </p>
             </div>
+
             <div class="card">
                 <h3>사업영역</h3>
-                <p>생산 아웃소싱, 공조부품 가공·조립, 공정·품질 개선, ERP·MES·QMS 구축 등 주요 서비스를 정리했습니다.</p>
-                <p style="margin-top:10px;"><a href="business.html">→ 사업영역 자세히 보기</a></p>
+                <p>
+                    생산 아웃소싱, 공조부품 가공·조립, 공정·품질 개선, ERP·MES·QMS 구축 등
+                    주요 서비스를 정리했습니다.
+                </p>
+                <p style="margin-top:10px;">
+                    <a href="business.html">→ 사업영역 자세히 보기</a>
+                </p>
             </div>
+
             <div class="card">
                 <h3>오시는 길 & 문의</h3>
-                <p>방문 및 상담은 언제든지 환영합니다. 주소, 연락처, 주요 문의 항목을 확인해 주세요.</p>
-                <p style="margin-top:10px;"><a href="contact.html">→ 오시는 길 & 문의</a></p>
+                <p>
+                    방문 및 상담은 언제든지 환영합니다.
+                    주소, 연락처, 주요 문의 항목을 확인해 주세요.
+                </p>
+                <p style="margin-top:10px;">
+                    <a href="contact.html">→ 오시는 길 & 문의</a>
+                </p>
             </div>
         </div>
     </section>
@@ -73,5 +98,19 @@
 <footer>
     © 2025 KairoTech Co., Ltd. All rights reserved.
 </footer>
+
+<!-- 모바일 햄버거 메뉴 스크립트 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-menu');
+        if (!btn || !nav) return;
+
+        btn.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    });
+</script>
+
 </body>
 </html>
