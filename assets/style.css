@@ -374,3 +374,149 @@ footer{
         font-size:16px;
     }
 }
+/* ==========================
+   HOME HERO 강화 스타일
+   ========================== */
+.hero.hero-home {
+    background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.12), transparent 60%),
+        linear-gradient(135deg, #10265f, #1a57ff 55%, #00c2ff);
+    color: #fff;
+}
+
+.hero-home .hero-badge {
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.hero-home h1 {
+    color: #fff;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.hero-highlight {
+    color: #ffe066;
+}
+
+.hero-home .hero-lead {
+    color: rgba(255,255,255,0.86);
+}
+
+/* HERO 레이아웃 보완 */
+.hero-inner {
+    max-width: 520px;
+}
+
+.hero-actions {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 버튼 스타일 */
+.btn-primary,
+.btn-ghost {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #1a57ff;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.btn-ghost:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+/* HOME HERO 안에서 stat 카드 색 반전 */
+.hero-home .stat {
+    background: rgba(0,0,0,0.25);
+    border-color: rgba(255,255,255,0.25);
+}
+
+.hero-home .stat-title {
+    color: rgba(255,255,255,0.75);
+}
+
+.hero-home .stat-value {
+    color: #fff;
+}
+
+/* 오른쪽 요약 박스 (유리 카드) */
+.hero-side-card {
+    padding: 22px 20px;
+    border-radius: var(--radius);
+    background: rgba(0, 10, 40, 0.55);
+    border: 1px solid rgba(255,255,255,0.28);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    color: #fff;
+    backdrop-filter: blur(14px);
+}
+
+.hero-side-card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.hero-side-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-side-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    margin-top: 8px;
+}
+
+.hero-side-list li:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.hero-side-list strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+/* 모바일에서 HERO 정리 */
+@media (max-width: 860px) {
+    .hero.hero-home {
+        padding-top: 40px;
+    }
+    .hero-side-card {
+        margin-top: 10px;
+    }
+}
+
