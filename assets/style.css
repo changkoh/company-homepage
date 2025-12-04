@@ -765,3 +765,8 @@ section.section-contact {
     }
 }
 
+/* 첫 번째 섹션과 다음 내용 사이 간격 추가 */
+main > section:first-of-type {
+    margin-bottom: 40px; /* 원하는 값으로 조정 30~60px */
+}
+
