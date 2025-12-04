@@ -769,4 +769,8 @@ section.section-contact {
 main > section:first-of-type {
     margin-bottom: 40px; /* 원하는 값으로 조정 30~60px */
 }
+/* 대표 소개 섹션 위쪽 여백 추가 */
+section#ceo {
+    margin-top: 50px;   /* 필요하면 40–80px 조절 */
+}
 
