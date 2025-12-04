@@ -10,15 +10,17 @@
 <header>
     <div class="nav-inner">
         <div class="brand">
-            <img src="assets/logo.png" alt="KairoTech Logo" class="logo-img">
+            <img src="assets/logo.png" alt="KairoTech Logo" class="logo-img" />
             <span class="brand-text">카이로텍 KairoTech</span>
         </div>
 
         <!-- 모바일용 햄버거 버튼 -->
-        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+        <button class="menu-toggle" type="button" aria-label="메뉴 열기">
+            ☰
+        </button>
 
         <!-- 네비게이션 메뉴 -->
-        <nav class="nav-menu">
+        <nav class="nav-menu" aria-label="주요 메뉴">
             <a href="index.html">홈</a>
             <a href="about.html">회사소개</a>
             <a href="business.html">사업영역</a>
@@ -29,56 +31,56 @@
 
 <main>
     <section class="section-contact">
-        <h2>오시는 길 & 문의</h2>
+        <h2>오시는 길 &amp; 문의</h2>
         <p class="sub">
             언제든지 방문·상담 요청을 주시면,
             현장과 시스템을 함께 보여드리며 카이로텍의 운영 방식을 설명드리겠습니다.
         </p>
 
-        <!-- ① 카드 3개만 contact-grid 안에 -->
+        <!-- ① 주소 / 연락처 / 문의 내용 카드 -->
         <div class="contact-grid">
             <div class="contact-box">
-                <strong>주소</strong>
-                (우) 18627 경기도 화성시 양감면 정문송산로93번길 8-46<br>
+                <strong>주소</strong><br />
+                (우) 18627 경기도 화성시 양감면 정문송산로93번길 8-46<br />
                 (주)카이로텍
             </div>
 
             <div class="contact-box">
-                <strong>연락처</strong>
-                대표전화 : 010-3311-9516<br>
+                <strong>연락처</strong><br />
+                대표전화 : 010-3311-9516<br />
                 E-mail : changkoh@kairotech.co.kr
             </div>
 
             <div class="contact-box">
-                <strong>주요 문의 내용</strong>
-                · 생산 아웃소싱/사급·도급 운영 문의<br>
+                <strong>주요 문의 내용</strong><br />
+                · 생산 아웃소싱/사급·도급 운영 문의<br />
                 · ERP·MES·QMS 구축 및 연동 협의
             </div>
         </div>
 
-        <!-- ② 버튼은 grid 밖, 아래쪽 한 줄 -->
+        <!-- ② 네이버 지도 버튼 -->
         <div class="map-actions">
-            <a href="https://map.naver.com/p/search/카이로텍"
+            <a href="https://map.naver.com/p/entry/place/31706414"
                target="_blank"
+               rel="noopener noreferrer"
                class="btn-naver-map">
                 네이버 지도에서 보기
             </a>
         </div>
 
-        <!-- ③ 지도 임베드도 grid 밖, 버튼 아래 전체 폭 -->
+        <!-- ③ PC/태블릿용 네이버 지도 임베드 (모바일에서는 CSS로 숨김 처리 권장) -->
         <div class="map-embed">
-            <iframe 
+            <iframe
                 src="https://map.naver.com/p/entry/place/31706414?c=17.69,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202512041106&locale=ko&svcName=map_pcv5"
-                width="100%" 
-                height="350" 
-                style="border:0;" 
-                loading="lazy">
+                width="100%"
+                height="350"
+                style="border:0;"
+                loading="lazy"
+                title="카이로텍 위치 네이버 지도">
             </iframe>
         </div>
-
     </section>
 </main>
-
 
 <footer>
     © 2025 KairoTech Co., Ltd. All rights reserved.
@@ -86,13 +88,13 @@
 
 <!-- 모바일 햄버거 메뉴 스크립트 -->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.nav-menu');
+    document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".nav-menu");
         if (!btn || !nav) return;
 
-        btn.addEventListener('click', function () {
-            nav.classList.toggle('active');
+        btn.addEventListener("click", function () {
+            nav.classList.toggle("active");
         });
     });
 </script>
