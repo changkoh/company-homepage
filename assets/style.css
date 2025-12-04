@@ -759,3 +759,9 @@ section.section-contact {
     }
 }
 
+@media (max-width: 600px) {
+    .map-embed {
+        display: none;
+    }
+}
+
